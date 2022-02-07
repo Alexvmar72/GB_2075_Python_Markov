@@ -4,16 +4,15 @@ def convert_time(duration):
     minutes = (duration // 60) % 60
     seconds = duration % 60
     if days > 0:
-        return (days, 'дн', hours, 'час', minutes, 'мин', seconds, 'сек')
+        return f'{days} дн, {hours} час, {minutes} мин, {seconds} сек'
     elif hours > 0:
-        return (hours, 'час', minutes, 'мин', seconds, 'сек')
+        return f'{hours} час, {minutes} мин, {seconds} сек'
     elif minutes > 0:
-        return (minutes, 'мин', seconds, 'сек')
+        return f'{minutes} мин, {seconds} сек'
     elif seconds > 0:
-        return (seconds, 'сек')
+        return f'{seconds} сек'
 
 duration = int(input('Введите время в секундах: '))
 
 result = convert_time(duration)
 print(result)
-
