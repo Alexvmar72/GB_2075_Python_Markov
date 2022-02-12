@@ -26,14 +26,18 @@ import requests
 def currency_rates(code: str) -> float:
     """возвращает курс валюты `code` по отношению к рублю"""
     # ваша реализация здесь
+    idx = 0
+    code = code.upper()
     response = requests.get('http://www.cbr.ru/scripts/XML_daily.asp')
     print(response)
     #result_value = 1.11  ## здесь должно оказаться результирующее значение float
     #return result_value
     data_str = response.text
-    print(data_str)
-    data_dict = data_str.split('Valute ID')
-    print(data_dict)
+    if code in data_str:
+
+        #print(data_str)
+        data_dict = data_str.split('Valute ID')
+        print(data_dict)
 
 
 print(currency_rates("USD"))
