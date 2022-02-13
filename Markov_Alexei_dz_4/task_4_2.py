@@ -36,18 +36,25 @@ def currency_rates(code: str) -> float:
         data_list = data_str.split('Valute ID')
         for mean in data_list:
             if code in mean:
-                rate = mean[-25:-18]
-                result_value = rate
+                value_lst = mean.split('Value>')
+                value_1 = value_lst[-2]
+                value_1_lst = value_1.split('<')
+                value_2 = value_1_lst[0]
+                value_2_lst = value_2.split(',')
+                rate = float(value_2_lst[0] + '.' + value_2_lst[-1])
+                nominal_2_lst = mean.split('Nominal>')
+                nominal_2 = nominal_2_lst[1]
+                nominal_1_lst = nominal_2.split('<')
+                nominal = int(nominal_1_lst[0])
+                result_value = rate / nominal
 
-
-
-
-
-
-
-        #print(data_list)
-      ## здесь должно оказаться результирующее значение float
     return result_value
 
+print(currency_rates("gbp"))
+print(currency_rates("aud"))
+print(currency_rates("aZN"))
+print(currency_rates("amd"))
+print(currency_rates("huf"))
+print(currency_rates("hkd"))
 print(currency_rates("USD"))
 print(currency_rates("noname"))
