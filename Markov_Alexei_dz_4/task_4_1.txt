@@ -1,0 +1,57 @@
+PS C:\Users\user\PycharmProjects\first\GB_2075_Python_Markov> pip show pillow
+WARNING: Package(s) not found: pillow
+PS C:\Users\user\PycharmProjects\first\GB_2075_Python_Markov> pip freeze
+certifi==2021.10.8
+charset-normalizer==2.0.11
+idna==3.3
+requests==2.27.1
+urllib3==1.26.8
+PS C:\Users\user\PycharmProjects\first\GB_2075_Python_Markov> pip install pillow
+Collecting pillow
+  Downloading Pillow-9.0.1-cp310-cp310-win_amd64.whl (3.2 MB)
+     |████████████████████████████████| 3.2 MB 930 kB/s
+Installing collected packages: pillow
+Successfully installed pillow-9.0.1
+
+PS C:\Users\user\PycharmProjects\first\GB_2075_Python_Markov> virt/Scripts/Activate.ps1
+
+Не удается проверить издателя. Вы действительно хотите запустить эту программу?
+Файл C:\Users\user\PycharmProjects\first\GB_2075_Python_Markov\virt\Scripts\Activate.ps1 публикуется CN=Python Software Foundation,
+O=Python Software Foundation, L=Wolfeboro, S=New Hampshire, C=US и не является доверенным для данной системы. Выполняйте сценарии только
+от доверенных издателей.
+[V] Никогда не запускать - V  [D] Не запускать - D  [R] Запустить однажды - R  [A] Всегда запускать - A  [?] Справка
+(значением по умолчанию является "D"):a
+
+(virt) PS C:\Users\user\PycharmProjects\first\GB_2075_Python_Markov> pip freeze
+(virt) PS C:\Users\user\PycharmProjects\first\GB_2075_Python_Markov> pip install pillow==8.0.1
+Collecting pillow==8.0.1
+  Downloading Pillow-8.0.1.tar.gz (44.6 MB)
+     |████████████████████████████████| 44.6 MB 3.3 MB/s
+Using legacy 'setup.py install' for pillow, since package 'wheel' is not installed.
+Installing collected packages: pillow
+    Running setup.py install for pillow ... error
+    ERROR: Command errored out with exit status 1:
+
+(virt) PS C:\Users\user\PycharmProjects\first\GB_2075_Python_Markov> pip install pillow
+Collecting pillow
+  Using cached Pillow-9.0.1-cp310-cp310-win_amd64.whl (3.2 MB)
+Installing collected packages: pillow
+Successfully installed pillow-9.0.1
+
+(virt) PS C:\Users\user\PycharmProjects\first\GB_2075_Python_Markov> pip freeze
+Pillow==9.0.1
+(virt) PS C:\Users\user\PycharmProjects\first\GB_2075_Python_Markov> pip show pillow
+Name: Pillow
+Version: 9.0.1
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: c:\users\user\pycharmprojects\first\gb_2075_python_markov\virt\lib\site-packages
+Requires:
+Required-by:
+(virt) PS C:\Users\user\PycharmProjects\first\GB_2075_Python_Markov>
+
+(virt) PS C:\Users\user\PycharmProjects\first\GB_2075_Python_Markov> deactivate
+PS C:\Users\user\PycharmProjects\first\GB_2075_Python_Markov>
