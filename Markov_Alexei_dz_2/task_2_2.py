@@ -1,5 +1,5 @@
 def convert_list_in_str(list_in: list) -> str:
-    str_out = ' '
+    str_out = ''
     for idx, word in enumerate(list_in):
         if word.isdigit() and len(word) == 1:
             word = '"' + '0' + word[-1] + '"'
@@ -20,11 +20,8 @@ def convert_list_in_str(list_in: list) -> str:
             word = '"' + word + '"'
             list_in[idx] = word
 
-
-
         str_out += word + ' '
     return str_out
-
 
 my_list = ['в', '5', 'часов', '07', 'минут', 'температура', 'воздуха', 'была', '+17', 'градусов']
 
