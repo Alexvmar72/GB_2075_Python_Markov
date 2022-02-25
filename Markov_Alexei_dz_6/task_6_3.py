@@ -13,7 +13,7 @@ def prepare_dataset(path_users_file: str, path_hobby_file: str) -> dict:
         if len(lst_users) < len(lst_hobby):
             return 1
         elif len(lst_users) > len(lst_hobby):
-            lst_hobby.append(None)
+            lst_hobby.append('None')
 
         dict_tmp = dict(zip(lst_users, lst_hobby))
 
