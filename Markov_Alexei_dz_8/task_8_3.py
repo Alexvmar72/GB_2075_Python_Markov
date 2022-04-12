@@ -1,19 +1,19 @@
-#Написать декоратор для логирования типов позиционных аргументов функции, например:
-#
-#def type_logger...
-#    ...
-#
-#
+def type_logger(func):
+    def wrapper(*args):
+        str_tmp = ''
+        lst_result = [f'{number}: {type(func(number))}' for number in args]
+        lst_result.reverse()
+        while len(lst_result) > 1:
+           str_tmp += lst_result.pop() + ', '
+        str_tmp += lst_result.pop()
+        str_end = f'{func.__name__}({str_tmp})'
+        return str_end
+
+    return wrapper
+
+
 @type_logger
 def calc_cube(x):
-   return x ** 3
+    return x ** 3
 
-
-$ a = calc_cube(5)
-5: <class 'int'>
-#Примечание: если аргументов несколько - выводить данные о каждом через запятую;
-# можете ли вы вывести тип значения функции? Сможете ли решить задачу для именованных аргументов?
-# Сможете ли вы замаскировать работу декоратора? Сможете ли вывести имя функции, например, в виде:
-
-$ a = calc_cube(5)
-calc_cube(5: <class 'int'>)
+print(calc_cube(5, 6))
