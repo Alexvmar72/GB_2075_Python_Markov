@@ -4,8 +4,8 @@ class Road:
         self._length = length
         self._width = width
 
-    def calculate(self, heigth: int = 5, mass_m_2: int = 25) -> int:
-        return int((self._length * self._width * heigth * mass_m_2) / 1000)
+    def calculate(self, height: int = 5, mass_m_2: int = 25) -> int:
+        return int((self._length * self._width * height * mass_m_2) / 1000)
 
 if __name__ == '__main__':
     road = Road(5000, 20)
