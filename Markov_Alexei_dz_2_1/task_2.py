@@ -13,9 +13,9 @@
 
 x = y = z = 0
 
-while x <=1:
+while x <= 1:
     while y <= 1:
-        while z <=1:
+        while z <= 1:
             print(x, y, z)
             if (not (x or y or z)) == ((not x) and (not y) and (not x)):
                 print('Выражение истинно')
